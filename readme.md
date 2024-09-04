@@ -1,6 +1,6 @@
 # BasicCAT
 
-[![Documentation Status](https://readthedocs.org/projects/basiccat-docs/badge/?version=latest)](https://docs.basiccat.org/zh_CN/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/basiccat-docs/badge/?version=latest)](https://docs.basiccat.org/zh_CN/latest/?badge=latest) [![Downloads](https://img.shields.io/github/downloads/xulihang/BasicCAT/total.svg)]
 
 A computer-aided translation tool written in basic.
 
