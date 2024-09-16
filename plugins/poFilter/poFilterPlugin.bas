@@ -294,8 +294,8 @@ Sub generateFile(filename As String,path As String,projectFile As Map,BCATMain A
 				If Utils.LanguageHasSpace(projectFile.Get("target"))=False Then
 					source=segmentation.removeSpacesAtBothSides(path,projectFile.Get("source"),source,Utils.previousText(segments,i,"source"),Utils.getMap("settings",projectFile).GetDefault("remove_space",False))
 					fullsource=segmentation.removeSpacesAtBothSides(path,projectFile.Get("source"),fullsource,Utils.previousText(segments,i,"fullsource"),Utils.getMap("settings",projectFile).GetDefault("remove_space",False))
-				End If				
-				translation=filterGenericUtils.relaceAtTheRightPosition(source,target,fullsource)
+				End If
+				translation=fullsource.Replace(source,target)
 			End If
 			'Log("translation"&translation)
 			Dim extra As Map
@@ -308,14 +308,10 @@ Sub generateFile(filename As String,path As String,projectFile As Map,BCATMain A
 			
 			Dim id As Int=extra.Get("id")
 			
-
-			
-
 			If first Then
 				currentID=id
 				first=False
 			End If
-
 
 			If currentID<>id Then 'new msgid
 				msgstrList.Add(msgstr)
